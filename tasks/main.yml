@@ -1,0 +1,18 @@
+---
+- name: Install growpart
+  yum:
+    name: cloud-utils-growpart
+    state: latest
+
+- name: Grow partition
+  command: "growpart {{ root_device }} {{ root_partition }}"
+
+- name: Grow PV
+  command: "pvresize {{ root_device }}{{ root_partition }}"
+
+- name: Grow logical volume
+  lvol:
+    vg: centos_localcomputer
+    lv: root
+    size: +100%FREE
+    resizefs: true

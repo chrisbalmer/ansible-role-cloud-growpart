@@ -1,0 +1,3 @@
+---
+root_device: /dev/sda
+root_partition: 2
