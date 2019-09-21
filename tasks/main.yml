@@ -6,6 +6,7 @@
 
 - name: Grow partition
   command: "growpart {{ root_device }} {{ root_partition }}"
+  ignore_errors: yes
 
 - name: Grow PV
   command: "pvresize {{ root_device }}{{ root_partition }}"

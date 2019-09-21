@@ -1,7 +1,12 @@
 Cloud Growpart
-=========
+==============
 
 Installs the cloud-init-utils and expands the root partition.
+
+Tasks
+-----
+
+- [ ] Add error handling for the `growpart` task. [Details](https://docs.ansible.com/ansible/latest/user_guide/playbooks_error_handling.html)
 
 Requirements
 ------------
